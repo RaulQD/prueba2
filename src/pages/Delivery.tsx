@@ -83,6 +83,13 @@ export default function Delivery() {
                             </span>
                         </p>
                         <p className='font-medium'>
+                            DESCUENTO:
+                            <span className='font-normal'>
+                                {' '}
+                                {mutation.data.data.discountPercent} %
+                            </span>
+                        </p>
+                        <p className='font-medium'>
                             DESCUENTO EN DOLAR:
                             <span className='font-normal'>
                                 {formatCurrencyInDollars(
