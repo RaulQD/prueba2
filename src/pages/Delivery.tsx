@@ -73,24 +73,22 @@ export default function Delivery() {
             </div>
             {mutation.isSuccess && (
                 <div className='font-outfit  mt-8 bg-gray-100 p-6 shadow-md'>
-                    <h3>Informaciòn del costo de kilometraje</h3>
+                    <h3 className='text-xl'>Informaciòn del costo de kilometraje</h3>
                     <div>
                         <p className='font-medium'>
-                            DISTANCIA/KILOMETROS:
+                           Distanci / kilometros:
                             <span className='font-normal'>
-                                {' '}
                                 {mutation.data.data.distance} km
                             </span>
                         </p>
                         <p className='font-medium'>
-                            DESCUENTO:
+                            Descuento aplicado:
                             <span className='font-normal'>
-                                {' '}
                                 {mutation.data.data.discountPercent} %
                             </span>
                         </p>
                         <p className='font-medium'>
-                            DESCUENTO EN DOLAR:
+                           Descuento en dolares:
                             <span className='font-normal'>
                                 {formatCurrencyInDollars(
                                     mutation.data.data.discount
@@ -98,7 +96,7 @@ export default function Delivery() {
                             </span>
                         </p>
                         <p className='font-medium'>
-                           Total a Pagar en Dolar:
+                          Total a pagar en dolares:
                             <span className='font-normal'>
                                 {formatCurrencyInDollars(
                                     mutation.data.data.costInDollars
@@ -106,7 +104,7 @@ export default function Delivery() {
                             </span>
                         </p>
                         <p className='font-medium'>
-                           total a pagar en soles:{' '}
+                           Total a pagar en soles:
                             <span className='font-normal'>
                                 {formatCurrencyInSoles(
                                     mutation.data.data.costInSoles
